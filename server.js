@@ -49,6 +49,7 @@ function doorbellListener(sb) {
         }
         else{
           // We have received a message from a device
+          console.log(data);
           var m = JSON.parse(data.body);
           messages.push(m);
           console.log('recieved message'+m.body);
