@@ -34,7 +34,7 @@ function doorbellListener(sb) {
   var date = new Date();
   var time = date.getTime();
   var startSeconds = time / 1000;
-  var c_Timeout = 60;
+  var c_Timeout = 20;
   listenForMessages(c_Timeout);
   // Define a function that will listen for messages
   // on the queue for number of seconds
@@ -53,7 +53,7 @@ function doorbellListener(sb) {
           var m = JSON.parse(data.body);
           messages.push(m);
           console.log('recieved message'+m.body);
-          continueListeningForMessages();
+          //continueListeningForMessages();
 
           function continueListeningForMessages(){
             // Go back and listen for more messages for the duration of this task
