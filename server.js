@@ -52,7 +52,8 @@ function doorbellListener(sb) {
           console.log(data);
           var m = JSON.parse(data.body);
           messages.push(m);
-          console.log('recieved message'+m.body);
+          console.log('recieved message');
+          console.log(m.body);
           //continueListeningForMessages();
 
           function continueListeningForMessages(){
@@ -70,6 +71,7 @@ function doorbellListener(sb) {
         }
       }
     }
+    listenForMessages(seconds);
   });
   }
 }
